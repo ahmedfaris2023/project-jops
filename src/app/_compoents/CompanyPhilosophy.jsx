@@ -17,7 +17,7 @@ const CompanyPhilosophy = () => {
             Strategy. Enhance visibility through expert SEO and PPC management,{" "}
           </div>
         </div>
-        <div className="flex flex-col gap-12 ">
+        <div className="flex flex-col gap-12 pr-12 ">
           <div>
             <div className="text-5xl text-white font-bold">1,200+</div>
             <div className="text-[#646A69] pt-3">Clients</div>
