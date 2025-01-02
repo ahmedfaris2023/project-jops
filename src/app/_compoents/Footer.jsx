@@ -2,81 +2,90 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="relative ">
-      <div className="bg-primary pl-12 ">
-        <div className=" flex justify-between">
-          <div className="flex justify-between w-[800px]">
-            <div>
+    <div className="relative">
+      <div className="bg-primary px-4 md:pl-12 pt-10 md:pt-[150px]">
+        <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-0">
+          {/* Logo and Links Section */}
+          <div className="flex flex-col md:flex-row justify-between md:w-[800px] gap-10">
+            <div className="flex  md:justify-start">
               <a href="#">
-                <Image src="/assets/images/logo.png" width={140} height={140} />
+                <Image
+                  src="/assets/images/logo.png"
+                  width={140}
+                  height={140}
+                  alt="Logo"
+                />
               </a>
             </div>
-            <div className="text-white flex flex-col gap-2  ">
-              <div className="font-bold ">The company</div>
-              <div>Who are we </div>
-              <div>Services</div>
-              <div className="flex gap-2 ">
-                <div>Jobs</div>
-                <div className="bg-black w-8 h-6 rounded-full flex justify-center items-center">
-                  12
+            <div className="md:flex md:gap-36 gap-18 grid grid-cols-2">
+              <div className="text-white flex flex-col gap-2">
+                <div className="font-bold">The company</div>
+                <div>Who are we</div>
+                <div>Services</div>
+                <div className="flex gap-2 items-center">
+                  <div>Jobs</div>
+                  <div className="bg-black w-8 h-6 rounded-full flex justify-center items-center">
+                    12
+                  </div>
                 </div>
+                <div>Branches</div>
               </div>
-              <div>Branches</div>
-            </div>
-            <div className="text-white flex flex-col gap-2">
-              <div className="text-white font-bold ">Help center</div>
-              <div>Common questions</div>
-              <div>Contact us</div>
-              <div>Register as merchant</div>
+              <div className="text-white flex flex-col gap-2">
+                <div className="font-bold">Help center</div>
+                <div>Common questions</div>
+                <div>Contact us</div>
+                <div>Register as merchant</div>
+              </div>
             </div>
           </div>
-          <div className="flex flex-col pr-12 gap-4">
-            <div className="bg-white bg-opacity-40 w-[300px] h-[60px] flex items-center rounded-full ">
-              <div className=" bg-white flex items-center justify-center w-[50px] h-[50px]  rounded-full ml-1">
-                <Image
-                  className="  "
-                  src={"/assets/images/socialMedia/facebook1.png"}
-                  width={25}
-                  height={25}
-                  alt="image"
-                />
+
+          {/* Social Media Section */}
+          <div className="flex flex-col  md:items-end gap-4">
+            {[
+              {
+                img: "/assets/images/socialMedia/facebook1.png",
+                name: "Instagram",
+              },
+              {
+                img: "/assets/images/socialMedia/instagram.png",
+                name: "Linkedin",
+              },
+              {
+                img: "/assets/images/socialMedia/linkedin.png",
+                name: "Facebook",
+              },
+            ].map((social, index) => (
+              <div
+                key={index}
+                className="bg-white bg-opacity-40 w-[200px] md:w-[300px] h-[50px]  flex items-center rounded-full"
+              >
+                <div className="bg-white flex items-center justify-center w-[40px] h-[40px] rounded-full ml-2">
+                  <Image
+                    src={social.img}
+                    width={25}
+                    height={25}
+                    alt={`${social.name} icon`}
+                  />
+                </div>
+                <div className="text-white font-bold pl-3">{social.name}</div>
               </div>
-              <div className="text-white font-bold pl-3">Instgram</div>
-            </div>
-            <div className="bg-white bg-opacity-40 w-[300px] h-[60px] flex items-center rounded-full ">
-              <div className=" bg-white flex items-center justify-center w-[50px] h-[50px]  rounded-full ml-1">
-                <Image
-                  className="  "
-                  src={"/assets/images/socialMedia/instagram.png"}
-                  width={25}
-                  height={25}
-                />
-              </div>
-              <div className="text-white font-bold pl-3">Linkedin</div>
-            </div>
-            <div className="bg-white bg-opacity-40 w-[300px] h-[60px] flex items-center rounded-full ">
-              <div className=" bg-white flex items-center justify-center w-[50px] h-[50px]  rounded-full ml-1">
-                <Image
-                  className="  "
-                  src={"/assets/images/socialMedia/linkedin.png"}
-                  width={25}
-                  height={25}
-                />
-              </div>
-              <div className="text-white font-bold pl-3">Facebook</div>
-            </div>
+            ))}
           </div>
         </div>
-        <div className="flex justify-center items-center text-white mt-40 pb-10">
+
+        {/* Footer Bottom */}
+        <div className="flex justify-center items-center text-white text-center mt-20 sm:mt-10 md:mt-40 pb-10">
           © 2024 Leader Express Delivery Company. All rights reserved.
         </div>
       </div>
-      <div>
+
+      {/* Decorative Image */}
+      <div className="absolute bottom-0  hidden md:block">
         <Image
           src={"/assets/images/LinesCopy.png"}
           width={900}
           height={900}
-          className="absolute bottom-0  "
+          alt="Decorative lines"
         />
       </div>
     </div>

@@ -4,80 +4,73 @@ import BarChart from "../charts/BarChart";
 
 const ChartsTwo = () => {
   const data = {
-    labels: ["January", "February", "March"],
-    // datasets: [
-    //   {
-    //     label: "Sales",
-    //     data: [10, 20, 30],
-    //     backgroundColor: [
-    //       "rgba(255, 99, 132, 0.6)", // January
-    //       "rgba(54, 162, 235, 0.6)", // February
-    //       "rgba(255, 206, 86, 0.6)", // March
-    //     ],
-    //     borderColor: "rgba(255, 0, 0, 1)", // تغيير لون الخطوط إلى الأحمر
-    //     borderWidth: 2, // زيادة عرض الحدود لجعلها أكثر وضوحًا
-    //   },
-    // ],
+    labels: ["xs", "s", "m"],
+
     datasets: [
       {
-        label: "My First Dataset",
-        data: [65, 59, 80, 81, 56, 55, 40],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(255, 159, 64, 0.2)",
-          "rgba(255, 205, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(201, 203, 207, 0.2)",
-        ],
-        borderColor: [
-          "rgb(255, 99, 132)",
-          "rgb(255, 159, 64)",
-          "rgb(255, 205, 86)",
-          "rgb(75, 192, 192)",
-          "rgb(54, 162, 235)",
-          "rgb(153, 102, 255)",
-          "rgb(201, 203, 207)",
-        ],
-        borderWidth: 1,
+        data: [75, 0, 0],
+        backgroundColor: ["rgba(125, 68, 131, 1)"],
+        borderWidth: 20,
+      },
+      {
+        data: [0, 125, 0],
+        backgroundColor: [" rgba(243, 114, 44, 1)"],
+        borderWidth: 20,
+      },
+      {
+        data: [0, 0, 175],
+        backgroundColor: ["rgba(248, 150, 30, 1)"],
+        borderWidth: 20,
       },
     ],
   };
 
   const options = {
-    responsive: true,
     plugins: {
       legend: {
-        position: "top",
-        labels: {
-          color: "white", // لون النصوص في الأسطورة
-        },
-      },
-      title: {
-        display: true,
-        text: "Monthly Sales Data",
-        color: "white", // لون عنوان المخطط
+        display: false,
       },
     },
+    responsive: true,
     scales: {
-      x: {
+      y: {
+        grid: {
+          color: "rgba(255, 255, 255, 0.2)",
+          borderDash: [20, 20],
+        },
         ticks: {
-          color: "white", // لون النصوص في المحور X
+          color: "#ffff",
         },
       },
-      y: {
+      x: {
+        grid: {
+          color: "rgba(255, 255, 255, 0.2)",
+          borderDash: [10, 5],
+        },
         ticks: {
-          color: "white", // لون النصوص في المحور Y
+          color: "#ffff",
         },
       },
     },
   };
 
   return (
-    <div className="w-[1000px]">
-      <h1 className="text-white">Bar Chart Example</h1>
+    <div className="w-full sm:w-[800px] h-[700px] sm:h-[800px] pt-10 pl-6">
       <BarChart data={data} options={options} />
+      <div className="text-white flex flex-wrap gap-6 pt-6 justify-center sm:justify-start">
+        <div className="flex items-center gap-3">
+          <div className="w-3 h-3 bg-primary rounded-full"></div>
+          <div>Product 1</div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="w-3 h-3 bg-[#F3722C] rounded-full"></div>
+          <div>Product 2</div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="w-3 h-3 bg-[#F8961E] rounded-full"></div>
+          <div>Product 3</div>
+        </div>
+      </div>
     </div>
   );
 };

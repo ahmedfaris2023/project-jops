@@ -7,11 +7,14 @@ const AboutUs = () => {
         src={"/assets/images/Lines.png"}
         width={1000}
         height={1400}
-        className="w-[1550px] h-[600px]"
+        className=" h-[300px] pr-[100px] md:w-[1550px] md:h-[600px]"
+        alt="Background Lines"
       />
-      <div className="flex flex-col  items-center gap-8 absolute top-[200px] w-full ">
-        <div className="text-white text-5xl  top-0 font-bold">About us</div>
-        <div className="text-white text-1xl w-[750px]">
+      <div className="flex flex-col items-center gap-8 absolute top-[100px] md:top-[200px] w-full px-4">
+        <div className="text-white text-3xl md:text-5xl font-bold">
+          About us
+        </div>
+        <div className="text-white text-sm md:text-lg w-full md:w-[750px] text-center md:text-left">
           Welcome to{" "}
           <span className="text-primary">Focus Marketing Solutions! </span>
           We're a creative team dedicated to driving your business forward with
@@ -22,7 +25,7 @@ const AboutUs = () => {
           </span>
         </div>
         <div>
-          <button className="border border-primary	 text-primary rounded-full  h-12 px-9 text-[16px] ml-2 font-bold ">
+          <button className="border border-primary text-primary rounded-full h-10 w-[350px] md:w-[160px] px-6 text-sm md:h-12 md:px-9 md:text-[16px] font-bold">
             Read more
           </button>
         </div>

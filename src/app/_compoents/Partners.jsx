@@ -20,7 +20,7 @@ const ImageSlider = () => {
   return (
     <div className="">
       <div className=" ">
-        <h2 className="text-center text-4xl font-bold mb-4 text-white py-12">
+        <h2 className="text-center text-xl md:text-4xl md:pb-10 font-bold mb-4 text-white mt-10">
           Our Partners
         </h2>
         <div>
@@ -29,19 +29,33 @@ const ImageSlider = () => {
             spaceBetween={5}
             slidesPerView={3.5}
             className="w-full"
+            breakpoints={{
+              350: {
+                slidesPerView: 1, // For small devices
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 3, // For medium devices
+                spaceBetween: 15,
+              },
+              1024: {
+                slidesPerView: 3.5, // For large devices
+                spaceBetween: 20,
+              },
+            }}
           >
             {images.map((img, index) => (
               <SwiperSlide
                 key={index}
                 className="flex justify-center items-center"
               >
-                <div className="flex justify-center items-center bg-white  h-32 rounded-lg shadow-md">
+                <div className="flex justify-center items-center bg-white h-12  md:h-32 rounded-lg shadow-md">
                   <Image
                     src={img}
                     alt={`Partner ${index + 1}`}
                     width={90}
                     height={70}
-                    className="object-contain"
+                    className="w-12 h-12 md:h-20 md:w-20"
                   />
                 </div>
               </SwiperSlide>

@@ -41,17 +41,25 @@ const CustomerFeedback = () => {
   };
 
   return (
-    <div className="pl-14 h-[800px] bg-primary pt-10 relative">
+    <div className="pl-4 md:pl-14 bg-primary pt-10 md:h-[800px] h-[650px] relative">
       <div>
-        <h2 className="text-center text-4xl font-bold mb-4 text-white py-12">
-          Our clients' opinions
+        <h2 className="text-center text-3xl md:text-6xl mb-8 md:mb-14 text-white py-8 md:py-12">
+          Our clients opinions
         </h2>
         <div>
           <Swiper
             ref={swiperRef}
             modules={[Navigation, Pagination]}
-            spaceBetween={20}
-            slidesPerView={3.1}
+            spaceBetween={0}
+            slidesPerView={1.1}
+            breakpoints={{
+              500: {
+                slidesPerView: 2.1,
+              },
+              1024: {
+                slidesPerView: 3.1,
+              },
+            }}
             className="w-full"
             navigation={{
               nextEl: ".swiper-button-next",
@@ -66,9 +74,9 @@ const CustomerFeedback = () => {
               {person.map((data, index) => (
                 <SwiperSlide
                   key={index}
-                  className="flex justify-center items-center "
+                  className="flex justify-center items-center"
                 >
-                  <div className="flex flex-col justify-start bg-black h-auto rounded-lg shadow-md p-10">
+                  <div className="flex flex-col justify-start bg-black rounded-lg shadow-md p-6 md:p-10  max-w-xs md:max-w-sm">
                     <Image
                       src={data.img}
                       alt={`Partner ${index + 1}`}
@@ -76,19 +84,29 @@ const CustomerFeedback = () => {
                       height={70}
                       className="object-contain"
                     />
-                    <div className="text-white font-bold pt-2">{data.name}</div>
-                    <div className="text-white pt-7 w-[300px] ">{data.dec}</div>
+                    <div className="text-white font-bold pt-2 text-lg">
+                      {data.name}
+                    </div>
+                    <div className="text-white pt-5 md:pt-7 text-sm md:text-base">
+                      {data.dec}
+                    </div>
                   </div>
                 </SwiperSlide>
               ))}
             </div>
           </Swiper>
-          <div className="custom-pagination flex justify-center gap-2 mt-16"></div>
+          <div className="custom-pagination flex justify-center gap-2 mt-8 md:mt-16"></div>
           <div
-            className="cursor-pointer absolute top-[300px] right-2 z-10 "
+            className="cursor-pointer absolute top-[300px] md:top-[360px] right-5 md:right-10 z-10"
             onClick={goToNextSlide}
           >
-            <Image src={"/assets/images/Arrows.png"} height={100} width={100} />
+            <Image
+              src={"/assets/images/Arrows.png"}
+              height={40}
+              width={40}
+              className="md:height-50 md:width-50"
+              alt="Next"
+            />
           </div>
         </div>
       </div>

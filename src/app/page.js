@@ -1,7 +1,6 @@
 import AboutUs from "./_compoents/AboutUs";
 import Banner from "./_compoents/Banner";
-import Charts from "./_compoents/charts/Charts";
-import ChartsTwo from "./_compoents/charts/ChartsTwo";
+import ChartsDashboard from "./_compoents/ChartsDashboard";
 import CompanyPhilosophy from "./_compoents/CompanyPhilosophy";
 import CustomerFeedback from "./_compoents/CustomerFeedback";
 import Footer from "./_compoents/Footer";
@@ -19,8 +18,7 @@ export default function Home() {
       <AboutUs />
       <Services />
       <CompanyPhilosophy />
-      <Charts />
-      <ChartsTwo />
+      <ChartsDashboard />
       <News />
       <Offers />
       <CustomerFeedback />
