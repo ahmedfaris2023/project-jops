@@ -35,7 +35,10 @@ const Services = () => {
   ];
 
   return (
-    <div className="w-full pt-10 flex flex-col gap-4 items-center px-4 md:px-8">
+    <div
+      id="services"
+      className="w-full pt-10 flex flex-col gap-4 items-center px-4 md:px-8"
+    >
       <div className="text-white text-3xl md:text-4xl pt-5">Our services</div>
       <div className="text-[#646A69] text-center text-sm md:text-base">
         Transforming your online presence with innovative digital strategies

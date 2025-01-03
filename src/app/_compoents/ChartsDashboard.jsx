@@ -3,8 +3,10 @@ import Charts from "./charts/Charts";
 
 const ChartsDashboard = () => {
   return (
-    <div className="pt-[200px] ml-10 sm:ml-4 px-4 sm:px-0 md:ml-12">
-      <div className="text-white font-bold text-3xl ">Our charts</div>
+    <div className="pt-[200px] ml-1 sm:ml-4 px-4 sm:px-0 md:ml-12">
+      <div className="text-white font-bold text-3xl flex items-center justify-center ">
+        Our charts
+      </div>
       <div className="flex flex-col sm:flex-row gap-10  md:gap-24 relative">
         {/* First Chart */}
         <div className="bg-white bg-opacity-5 w-full sm:w-[900px] h-[600px] mt-6">
@@ -18,7 +20,7 @@ const ChartsDashboard = () => {
             </div>
           </div>
           <div className="w-full h-[1px] bg-[#4F4D4D] mt-6"></div>
-          <div className="w-full ">
+          <div className="w-full   pr-4 ">
             <ChartsTwo />
           </div>
         </div>

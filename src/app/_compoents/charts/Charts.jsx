@@ -1,24 +1,17 @@
 "use client";
-import {
-  Chart as ChartJS,
-  ArcElement,
-  Tooltip,
-  Legend,
-  Colors,
-} from "chart.js";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 
-// Register Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Charts = () => {
   const data = {
     datasets: [
       {
-        data: [50, -50], // Values for the chart
-        backgroundColor: ["#7D4283", "#F3722C"], // Colors for the segments
-        hoverBackgroundColor: ["#800080", "#FFA500"], // Hover effect colors
-        borderWidth: 1, // Border thickness
+        data: [50, -50],
+        backgroundColor: ["#7D4283", "#F3722C"],
+        hoverBackgroundColor: ["#800080", "#FFA500"],
+        borderWidth: 1,
       },
     ],
   };
@@ -31,7 +24,7 @@ const Charts = () => {
     },
     responsive: true,
     maintainAspectRatio: false,
-    rotation: -90, // Disable aspect ratio restrictions
+    rotation: -90,
   };
 
   return (

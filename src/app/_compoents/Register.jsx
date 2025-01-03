@@ -1,6 +1,9 @@
 const Register = () => {
   return (
-    <div className="h-auto bg-primary mt-[300px] px-4 md:px-8 pt-10 md:pt-20">
+    <div
+      id="contact"
+      className="h-auto bg-primary mt-[300px] px-4 md:px-8 pt-10 md:pt-20"
+    >
       <div className="text-white text-2xl md:text-4xl font-bold text-center md:text-left">
         What are you waiting for?
       </div>
@@ -14,7 +17,7 @@ const Register = () => {
           placeholder="your email"
           className="bg-white rounded-full h-[40px] w-full md:w-[250px] placeholder:pl-2"
         />
-        <button className="bg-black text-white rounded-full h-[40px]  w-[360px] md:w-[180px] text-sm md:text-base">
+        <button className="bg-black text-white rounded-full h-[40px]  w-[380px] md:h-[40px] md:w-[150px] text-sm md:text-base">
           Register now
         </button>
       </div>

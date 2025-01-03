@@ -31,15 +31,15 @@ const ImageSlider = () => {
             className="w-full"
             breakpoints={{
               350: {
-                slidesPerView: 1, // For small devices
+                slidesPerView: 1.2,
                 spaceBetween: 10,
               },
               768: {
-                slidesPerView: 3, // For medium devices
+                slidesPerView: 3,
                 spaceBetween: 15,
               },
               1024: {
-                slidesPerView: 3.5, // For large devices
+                slidesPerView: 3.5,
                 spaceBetween: 20,
               },
             }}

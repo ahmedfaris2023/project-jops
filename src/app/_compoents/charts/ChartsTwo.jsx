@@ -1,26 +1,44 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BarChart from "../charts/BarChart";
 
 const ChartsTwo = () => {
+  const [borderWidth, setBorderWidth] = useState(20);
+
+  useEffect(() => {
+    const updateBorderWidth = () => {
+      if (window.innerWidth <= 768) {
+        setBorderWidth(5);
+      } else {
+        setBorderWidth(20);
+      }
+    };
+
+    updateBorderWidth();
+    window.addEventListener("resize", updateBorderWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateBorderWidth);
+    };
+  }, []);
+
   const data = {
     labels: ["xs", "s", "m"],
-
     datasets: [
       {
         data: [75, 0, 0],
         backgroundColor: ["rgba(125, 68, 131, 1)"],
-        borderWidth: 20,
+        borderWidth: borderWidth,
       },
       {
         data: [0, 125, 0],
         backgroundColor: [" rgba(243, 114, 44, 1)"],
-        borderWidth: 20,
+        borderWidth: borderWidth,
       },
       {
         data: [0, 0, 175],
         backgroundColor: ["rgba(248, 150, 30, 1)"],
-        borderWidth: 20,
+        borderWidth: borderWidth,
       },
     ],
   };
@@ -55,7 +73,7 @@ const ChartsTwo = () => {
   };
 
   return (
-    <div className="w-full sm:w-[800px] h-[700px] sm:h-[800px] pt-10 pl-6">
+    <div className="w-full sm:w-[800px] h-[400px] sm:h-[800px] pt-10 pl-6">
       <BarChart data={data} options={options} />
       <div className="text-white flex flex-wrap gap-6 pt-6 justify-center sm:justify-start">
         <div className="flex items-center gap-3">

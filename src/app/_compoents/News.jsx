@@ -16,16 +16,16 @@ const News = () => {
     },
   ];
   return (
-    <div className="pt-10 px-4 sm:px-16 h-auto">
+    <div className="pt-[120px] px-4 sm:px-16 h-auto">
       <div className="flex flex-col sm:flex-row justify-between items-center">
         <div className="text-2xl sm:text-3xl text-white font-bold mb-4 sm:mb-0">
           News
         </div>
-        <button className="text-white rounded-full ml-2 w-32 h-10 text-center bg-primary text-[14px] font-bold">
+        <button className="text-white rounded-full ml-2 w-32 h-10 text-center bg-primary text-[14px] font-bold hidden md:block">
           View all news
         </button>
       </div>
-      <div className="flex flex-col sm:flex-row justify-around gap-10 sm:gap-20 mt-10">
+      <div className="flex flex-col sm:flex-row justify-between gap-10 sm:gap-20 mt-10 ">
         <div className="pt-10 sm:pt-14">
           <div>
             <Image
@@ -63,8 +63,8 @@ const News = () => {
               <div>
                 <Image
                   src={data.img}
-                  width={200}
-                  height={200}
+                  width={300}
+                  height={300}
                   className=" sm:w-[200px] h-auto w-[200px]"
                 />
               </div>

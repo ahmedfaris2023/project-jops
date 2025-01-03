@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <div className="pt-28 relative z-10">
+    <div id="about" className="pt-28 relative z-10">
       <Image
         src={"/assets/images/Lines.png"}
         width={1000}
@@ -25,9 +25,11 @@ const AboutUs = () => {
           </span>
         </div>
         <div>
-          <button className="border border-primary text-primary rounded-full h-10 w-[350px] md:w-[160px] px-6 text-sm md:h-12 md:px-9 md:text-[16px] font-bold">
-            Read more
-          </button>
+          <div>
+            <button className="border border-[#9350F2] text-[#9350F2] rounded-full h-10 w-[350px] md:w-[160px] px-6 text-sm md:h-12 md:px-9 md:text-[16px] font-bold transition-all duration-300 ease-in-out hover:bg-[#9350F2] hover:text-white hover:shadow-lg hover:scale-105">
+              Read more
+            </button>
+          </div>
         </div>
       </div>
     </div>

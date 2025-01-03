@@ -45,10 +45,9 @@ export default function Offers() {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row gap-12 p-5 lg:p-10 justify-between lg:h-[1000px]">
-      {/* النصوص */}
+    <div className="flex flex-col lg:flex-row gap-12 p-5 lg:p-10 justify-between lg:h-[800px] md:mt-24">
       <div className="pt-10 flex flex-col items-center lg:items-start text-center lg:text-left">
-        <div className="text-white text-4xl lg:text-6xl font-bold leading-tight lg:w-[600px]">
+        <div className="text-white text-4xl lg:text-7xl font-bold leading-tight lg:w-[580px]">
           Simple pricing for your Business
         </div>
         <div className="text-white pt-3 lg:w-[600px]">
@@ -56,24 +55,24 @@ export default function Offers() {
           discovered as a creative entrepreneur. Everything you need.
         </div>
       </div>
-      {/* العروض */}
+
       <div className="flex flex-col items-center lg:items-start">
         {offers.map((offer) => (
           <div key={offer.id} className="pt-6 w-full lg:w-auto">
             {activeOffer !== offer.id && (
-              <div className="flex justify-between items-center p-4 lg:p-6 bg-[#1A1A1A] rounded-md w-full lg:w-[700px] h-auto lg:h-[100px]">
+              <div className="flex justify-between items-center p-4 lg:p-6 bg-[#1A1A1A] rounded-lg w-full lg:w-[700px] h-auto lg:h-[100px]">
                 <div className="text-2xl lg:text-4xl font-bold text-primary">
                   {offer.title}
                 </div>
                 <button
                   onClick={() => setActiveOffer(offer.id)}
-                  className="flex justify-center items-center bg-primary w-12 h-12 lg:w-14 lg:h-14 rounded-full"
+                  className="flex justify-center items-center bg-primary w-8 h-8 lg:w-14 lg:h-14 rounded-full"
                 >
                   <Image
-                    className="pt-1"
+                    className="md:h-3 md:w-3"
                     src={"/assets/images/Vector.png"}
-                    width={20}
-                    height={20}
+                    width={10}
+                    height={10}
                     alt="image"
                   />
                 </button>
@@ -90,13 +89,14 @@ export default function Offers() {
                   </div>
                   <button
                     onClick={() => setActiveOffer(null)}
-                    className="flex justify-center items-center bg-white/10 w-10 h-10 lg:w-14 lg:h-14 rounded-full"
+                    className="flex justify-center items-center bg-white/10 w-8 h-8 lg:w-14 lg:h-14 rounded-full"
                   >
                     <Image
                       src={"/assets/images/Vector2.png"}
-                      width={20}
-                      height={20}
+                      width={10}
+                      height={10}
                       alt="image"
+                      className="md:h-3 md:w-3"
                     />
                   </button>
                 </div>

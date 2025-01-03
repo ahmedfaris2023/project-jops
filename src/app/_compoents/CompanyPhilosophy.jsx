@@ -1,6 +1,6 @@
 const CompanyPhilosophy = () => {
   return (
-    <div className="pt-20 px-6 sm:px-10 md:px-16">
+    <div id="Branches" className="pt-20 px-6 sm:px-10 md:px-16">
       <div className="flex items-center gap-2">
         <div className="w-2 h-2 bg-white rounded-full"></div>
         <div className="text-primary text-sm sm:text-base">
@@ -9,7 +9,6 @@ const CompanyPhilosophy = () => {
       </div>
       <div className="w-full h-[1px] bg-white mt-2"></div>
       <div className="pt-10 flex flex-col lg:flex-row justify-between gap-10">
-        {/* Left Section */}
         <div className="flex flex-col w-full lg:w-[600px]">
           <div className="text-primary text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
             We bear the responsibility of developing the sector.
@@ -21,7 +20,6 @@ const CompanyPhilosophy = () => {
           </div>
         </div>
 
-        {/* Right Section */}
         <div className="grid grid-cols-2  md:flex md:flex-col md:mr-12 gap-8 sm:gap-10 pr-0 lg:pr-12">
           <div>
             <div className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold">

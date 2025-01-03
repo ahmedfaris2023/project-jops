@@ -22,7 +22,7 @@ const CustomerFeedback = () => {
     {
       img: "/assets/images/personTwo.png",
       name: "Barbara Cook",
-      dec: "I am so happy with your company. Ever since my insurer switched to you, everything and everybody I ve spoken to has been extremely, extremely pleasant, helpful, and they listen to my concerns instead of just saying okay",
+      dec: "I am so happy with your company. Ever since my insurer switched to you, everything and everybody I ve spoken to has been extremely, extremely pleasant, helpful, and they listen to my concerns instead of just saying okay, and they listen to my concerns instead of just saying okay",
     },
     {
       img: "/assets/images/personThree.png",
@@ -76,7 +76,7 @@ const CustomerFeedback = () => {
                   key={index}
                   className="flex justify-center items-center"
                 >
-                  <div className="flex flex-col justify-start bg-black rounded-lg shadow-md p-6 md:p-10  max-w-xs md:max-w-sm">
+                  <div className="flex flex-col justify-start bg-black   rounded-lg shadow-md p-6 md:p-10  max-w-xs md:max-w-lg ">
                     <Image
                       src={data.img}
                       alt={`Partner ${index + 1}`}
@@ -95,9 +95,9 @@ const CustomerFeedback = () => {
               ))}
             </div>
           </Swiper>
-          <div className="custom-pagination flex justify-center gap-2 mt-8 md:mt-16"></div>
+          <div className="custom-pagination flex justify-center gap-2 mt-8 md:mt-16 hidden sm:flex"></div>
           <div
-            className="cursor-pointer absolute top-[300px] md:top-[360px] right-5 md:right-10 z-10"
+            className="cursor-pointer absolute top-[500px] md:top-[360px] right-5 md:right-10 z-10"
             onClick={goToNextSlide}
           >
             <Image
