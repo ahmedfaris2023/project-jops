@@ -26,7 +26,12 @@ const Banner = () => {
           </div>
         </div>
         <div className="hidden md:block">
-          <Image src="/assets/images/Rectangle.png" width={535} height={445} />
+          <Image
+            src="/assets/images/Rectangle.png"
+            width={535}
+            height={445}
+            alt="company"
+          />
         </div>
       </div>
       <div className="hidden md:flex justify-between pl-10 md:z-0">
@@ -35,12 +40,14 @@ const Banner = () => {
           width={500}
           height={200}
           className="pt-[100px]"
+          alt="image3"
         />
         <Image
           src="/assets/images/image.png"
           className="mr-[230px] pt-10"
           width={300}
           height={300}
+          alt="image"
         />
       </div>
     </div>

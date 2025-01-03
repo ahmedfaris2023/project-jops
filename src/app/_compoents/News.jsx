@@ -33,6 +33,7 @@ const News = () => {
               width={750}
               height={750}
               className="w-full sm:w-[750px] h-auto"
+              alt="img"
             />
           </div>
           <div className="flex gap-3 pt-6 flex-wrap">
